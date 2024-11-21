@@ -1,0 +1,35 @@
+/* 
+날짜 : 2024/11/21
+이름 : 박수정
+내용 : 메인 기능 스타일 생성
+*/
+
+/* 메인 영역 */
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 주요 기능 섹션 */
+.main-content section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.main-content section h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.main-content section p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
