@@ -64,7 +64,8 @@ body {
   margin-left: auto;
 }
 
-.home, .login {
+.home,
+.login {
   padding: 13px 24px;
   border-radius: 6px;
   font-size: 14px;
