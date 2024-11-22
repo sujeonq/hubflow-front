@@ -1,53 +1,70 @@
 /* 
-날짜 : 2024/11/22
-이름 : 강유정
-내용 : 메인 스타일 생성
+    날짜 : 2024/11/22
+    이름 : 강유정
+    내용 : 메인 스타일 생성
+
+    추가내역
+    -------------
+    11.22 박수정 - 폰트 추가 
+
 */
+
+/* 메인 영역 스타일 */
+@font-face {
+    font-family: 'KakaoRegular';
+    src: url('/fonts/KakaoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  main {
+    font-family: 'KakaoRegular', sans-serif;
+}
+
+main {
     background: #f2f4f7;
     height: 100%;
     /* 화면 높이에 맞게 메인 조정 */
     display: flex;
-    /* 중앙 정렬을 위한 flexbox */ 
-    flex-direction: column; /* 세로로 배치 */
-    align-items: center; /* 가로 중앙 정렬 */
-    gap: 20px; /* 요소 간 간격 */
-    padding: 20px 0; /* 위아래 여백 */
-  }
-  
-  .main1 {
+    /* 중앙 정렬을 위한 flexbox */
+    flex-direction: column;
+    /* 세로로 배치 */
+    align-items: center;
+    /* 가로 중앙 정렬 */
+    gap: 20px;
+    /* 요소 간 간격 */
+    padding: 20px 0;
+    /* 위아래 여백 */
+}
+
+.main1 {
     background: linear-gradient(180deg, #8b7ac9, #1e8591, #5bc590);
-    /* 보라색 그라데이션 */ 
+    /* 보라색 그라데이션 */
     height: 600px;
     width: 1000px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     /* 그림자 효과 */
-  }
+}
 
-  
-  h1 {
+
+h1 {
     color: #f2f4f7;
     text-align: center;
     margin-top: 20px;
-  }
-  
-  .btn {
+}
+
+.btn {
     display: flex;
     justify-content: center;
     gap: 20px;
     /* 버튼 간격 */
     margin-top: 40px;
     /* 상단 텍스트와 간격 */
-  }
-  
-  .btn1 {
+}
+
+.btn1 {
     color: white;
     background-color: #d2dfe080;
     height: 35px;
@@ -57,9 +74,9 @@ body {
     cursor: pointer;
     border: none;
     font-weight: 600;
-  }
-  
-  .btn2 {
+}
+
+.btn2 {
     background-color: white;
     border-color: white;
     height: 35px;
@@ -69,16 +86,16 @@ body {
     cursor: pointer;
     border: none;
     font-weight: 600;
-  }
-  
-  div.text1 {
+}
+
+div.text1 {
     margin-top: 30px;
     margin-left: 370px;
     position: relative;
     /* 자식 요소의 절대 위치를 설정하기 위한 기준 */
-  }
-  
-  input[type="text"] {
+}
+
+input[type="text"] {
     width: 40%;
     border-radius: 20px;
     border: none;
@@ -88,14 +105,14 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     outline: none;
     background-color: #d2dfe0ea;
-  
-  }
-  
-  input[type="text"]::placeholder {
+
+}
+
+input[type="text"]::placeholder {
     color: #8f8e8e;
-  }
-  
-  img.search1 {
+}
+
+img.search1 {
     position: absolute;
     /* input 내부에 배치하기 위해 절대 위치 설정 */
     left: calc(55% - 130px);
@@ -105,20 +122,20 @@ body {
     /* 세로 중앙 정렬 */
     height: 15px;
     width: 15px;
-  }
-  
-  img.main1 {
+}
+
+img.main1 {
     height: 300px;
     width: 750px;
     border-radius: 10px;
     margin-left: 130px;
     margin-top: 44px;
-  }
+}
 
 
-  /* main2 */
+/* main2 */
 
-  .main2 {
+.main2 {
     border-radius: 20px;
     width: 1000px;
     padding: 40px;
@@ -176,7 +193,7 @@ body {
     font-weight: bold;
     text-align: center;
     transition: background-color 0.3s;
-    
+
 }
 
 .main2-btn:hover {
@@ -225,11 +242,15 @@ body {
 }
 
 .main3-card {
-    position: relative; /* 자식 요소의 위치 조정을 위한 기준 */
-    width: 80%; /* 카드 전체 너비 */
-    max-width: 600px; /* 카드 최대 너비 */
+    position: relative;
+    /* 자식 요소의 위치 조정을 위한 기준 */
+    width: 80%;
+    /* 카드 전체 너비 */
+    max-width: 600px;
+    /* 카드 최대 너비 */
     border-radius: 15px;
-    overflow: hidden; /* 자식 요소가 카드 영역을 넘어가면 잘리도록 설정 */
+    overflow: hidden;
+    /* 자식 요소가 카드 영역을 넘어가면 잘리도록 설정 */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
     background: #ffffff;
@@ -256,31 +277,40 @@ body {
 }
 
 .main3-img {
-    width: 100%; /* 이미지가 카드 너비에 맞게 */
-    height: auto; /* 비율 유지 */
+    width: 100%;
+    /* 이미지가 카드 너비에 맞게 */
+    height: auto;
+    /* 비율 유지 */
 }
 
 .main3-overlay {
-    position: absolute; /* 이미지 위에 텍스트를 배치 */
+    position: absolute;
+    /* 이미지 위에 텍스트를 배치 */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* 반투명 검정 배경 */
-    display: flex; /* 텍스트를 중앙에 배치하기 위한 플렉스 박스 */
+    background: rgba(0, 0, 0, 0.5);
+    /* 반투명 검정 배경 */
+    display: flex;
+    /* 텍스트를 중앙에 배치하기 위한 플렉스 박스 */
     justify-content: center;
     align-items: center;
-    color: #ffffff; /* 텍스트 색상 */
+    color: #ffffff;
+    /* 텍스트 색상 */
     text-align: center;
     font-size: 18px;
     font-weight: bold;
     padding: 20px;
-    opacity: 0; /* 기본 상태에서는 보이지 않음 */
-    transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+    opacity: 0;
+    /* 기본 상태에서는 보이지 않음 */
+    transition: opacity 0.3s ease;
+    /* 부드러운 전환 효과 */
 }
 
 .main3-step:hover .main3-overlay {
-    opacity: 1; /* hover 시 텍스트가 보이도록 설정 */
+    opacity: 1;
+    /* hover 시 텍스트가 보이도록 설정 */
 }
 
 .main3-author {
@@ -294,16 +324,20 @@ body {
 /* 슬라이더 컨테이너 */
 .main3-slider {
     display: flex;
-    overflow: hidden; /* 슬라이더 영역 밖의 요소 숨김 */
+    overflow: hidden;
+    /* 슬라이더 영역 밖의 요소 숨김 */
     width: 100%;
     position: relative;
-    transition: transform 0.5s ease-in-out; /* 부드러운 이동 효과 */
+    transition: transform 0.5s ease-in-out;
+    /* 부드러운 이동 효과 */
 }
 
 /* 슬라이드 카드 */
 .main3-card {
-    flex: 0 0 100%; /* 한 번에 하나의 카드만 보이도록 설정 */
-    box-sizing: border-box; /* 패딩 포함 계산 */
+    flex: 0 0 100%;
+    /* 한 번에 하나의 카드만 보이도록 설정 */
+    box-sizing: border-box;
+    /* 패딩 포함 계산 */
 }
 
 /* 네비게이션 버튼 */
@@ -356,12 +390,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%; /* 텍스트가 세로로 배치되도록 높이를 설정 */
+    height: 100%;
+    /* 텍스트가 세로로 배치되도록 높이를 설정 */
 }
 
 .main4-img {
     border-radius: 10px;
-    max-width: 100%; /* 이미지를 부모의 너비에 맞게 조정 */
+    max-width: 100%;
+    /* 이미지를 부모의 너비에 맞게 조정 */
 }
 
 
@@ -374,13 +410,13 @@ body {
     border-radius: 5px;
 }
 
-.main5-title{
+.main5-title {
     margin-top: 15px;
     margin-left: 10px;
     color: #333333;
 }
 
-.main5-desc{
+.main5-desc {
     margin-top: 10px;
     margin-left: 10px;
     color: #7c7b7b;
