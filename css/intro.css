@@ -7,3 +7,10 @@
     -------------
     11.22  강유정 - 000000
 */
+
+@font-face {
+    font-family: 'KakaoRegular';
+    src: url('/fonts/KakaoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }

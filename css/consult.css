@@ -3,6 +3,13 @@
    내용: 지원문의 스타일 생성 */
 
 /* 메인 영역 */
+@font-face {
+    font-family: 'KakaoRegular';
+    src: url('/fonts/KakaoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .main-content {
     max-width: 1200px;
     margin: 40px auto;
@@ -10,6 +17,7 @@
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'KakaoRegular', sans-serif;
 }
 
 /* 타이틀 및 서브타이틀 */

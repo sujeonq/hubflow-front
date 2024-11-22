@@ -5,10 +5,19 @@
 */
 
 /* 공통 스타일 */
+
+@font-face {
+  font-family: 'KakaoRegular';
+  src: url('/fonts/KakaoRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'KakaoRegular', sans-serif;
 }
 
 body {
