@@ -1,164 +1,115 @@
 /* 
-날짜 : 2024/11/21
-이름 : 박수정
+날짜 : 2024/11/22
+이름 : 강유정
 내용 : 메인 스타일 생성
 */
-
-/* 공통 스타일 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #fff;
 }
 
-/* 헤더 스타일 */
-.header {
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 20px 24px;
-}
-
-.header-container {
+main {
+  background: #f2f4f7;
+  height: calc(100vh - 80px - 200px);
+  /* 화면 높이에 맞게 메인 조정 */
   display: flex;
+  /* 중앙 정렬을 위한 flexbox */ 
+  justify-content: center;
+  /* 가로 방향 가운데 정렬 */
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  /* 세로 방향 가운데 정렬 */
 }
 
-.logo img {
-  height: 30px;
-  border: 1px solid #333;
-  border-radius: 6px;
-  padding: 13px 24px;
+.main {
+  background: linear-gradient(180deg, #8b7ac9, #1e8591, #5bc590);
+  /* 보라색 그라데이션 */
+  height: 600px;
+  width: 1000px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* 그림자 효과 */
 }
 
-.nav ul {
+h1 {
+  color: #f2f4f7;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
   display: flex;
-  list-style: none;
+  justify-content: center;
+  gap: 20px;
+  /* 버튼 간격 */
+  margin-top: 40px;
+  /* 상단 텍스트와 간격 */
 }
 
-.nav ul li {
-  margin: 0 15px;
-}
-
-.nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  padding: 8px 10px;
-}
-
-.nav ul li a:hover {
-  color: #00c473;
-}
-
-.buttons {
-  display: flex;
-  gap: 10px;
-  margin-left: auto;
-}
-
-.home,
-.login {
-  padding: 13px 24px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.home {
-  background-color: #fff;
-  color: #00c473;
-  border: 1px solid #ddd;
-}
-
-.home:hover {
-  background-color: #f9f9f9;
-}
-
-.login {
-  background-color: #00c473;
-  color: #fff;
-  border: none;
-}
-
-.login:hover {
-  background-color: #18a046;
-}
-
-/* 푸터 스타일 */
-.footer {
-  background-color: #333;
-  padding: 40px 20px;
-  color: #ccc;
-}
-
-.footer-container {
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #444;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-}
-
-.footer-logo img {
-  height: 40px;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.footer-links h4 {
-  margin-bottom: 10px;
-}
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links ul li {
-  margin-bottom: 5px;
-}
-
-.footer-links ul li a {
-  text-decoration: none;
-  color: #ccc;
-}
-
-.footer-links ul li a:hover {
-  color: #00c473;
-}
-
-.footer-bottom {
+.btn1 {
+  color: white;
+  background-color: #d2dfe080;
+  height: 35px;
+  width: 80px;
+  border-radius: 11px;
   font-size: 13px;
-  text-align: left;
-  border-top: 1px solid #444;
-  padding-top: 20px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
 }
 
-.footer-bottom a {
-  color: #ccc;
-  text-decoration: none;
+.btn2 {
+  background-color: white;
+  border-color: white;
+  height: 35px;
+  width: 80px;
+  border-radius: 11px;
+  font-size: 13px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
 }
 
-.footer-bottom a:hover {
-  color: #00c473;
+div.text1 {
+  margin-top: 30px;
+  margin-left: 370px;
+  position: relative;
+  /* 자식 요소의 절대 위치를 설정하기 위한 기준 */
+}
+
+input[type="text"] {
+  width: 40%;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 10px;
+  border-color: #e1e4e73f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+  background-color: #d2dfe0ea;
+
+}
+
+input[type="text"]::placeholder {
+  color: #8f8e8e;
+}
+
+img.search1 {
+  position: absolute;
+  /* input 내부에 배치하기 위해 절대 위치 설정 */
+  left: calc(55% - 130px);
+  /* input의 왼쪽 내부 위치 조정 */
+  top: 50%;
+  transform: translateY(-50%);
+  /* 세로 중앙 정렬 */
+  height: 15px;
+  width: 15px;
+}
+
+img.main1 {
+  height: 300px;
+  width: 750px;
+  border-radius: 10px;
+  margin-left: 130px;
+  margin-top: 44px;
 }

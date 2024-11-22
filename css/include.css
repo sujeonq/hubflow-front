@@ -1,0 +1,164 @@
+/* 
+날짜 : 2024/11/21
+이름 : 박수정
+내용 : 헤더, 푸터 스타일 생성
+*/
+
+/* 공통 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* 헤더 스타일 */
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 24px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 30px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 13px 24px;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav ul li {
+  margin: 0 15px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 10px;
+}
+
+.nav ul li a:hover {
+  color: #00c473;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.home,
+.login {
+  padding: 13px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.home {
+  background-color: #fff;
+  color: #00c473;
+  border: 1px solid #ddd;
+}
+
+.home:hover {
+  background-color: #f9f9f9;
+}
+
+.login {
+  background-color: #00c473;
+  color: #fff;
+  border: none;
+}
+
+.login:hover {
+  background-color: #18a046;
+}
+
+/* 푸터 스타일 */
+.footer {
+  background-color: #333;
+  padding: 40px 20px;
+  color: #ccc;
+}
+
+.footer-container {
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  height: 40px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-links h4 {
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.footer-links ul li a:hover {
+  color: #00c473;
+}
+
+.footer-bottom {
+  font-size: 13px;
+  text-align: left;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+.footer-bottom a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #00c473;
+}
