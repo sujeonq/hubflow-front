@@ -159,53 +159,92 @@
   background-color: #ffffff;
 }
 
-/* FAQ 갤러리 스타일 */
-.faq-gallery {
+/* FAQ 채팅 스타일 */
+.faq-chat {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-top: 40px;
-  width: 920px;
+  gap: 15px;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.faq-gallery h2 {
-  font-size: 2rem;
+.faq-chat h2 {
+  font-size: 2.2rem;
   text-align: center;
-  width: 100%;
-  margin-bottom: 30px;
-  color: #222;
-  padding-bottom: 10px;
-}
-
-/* FAQ 카드 스타일 */
-.faq-card {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 20px 25px;
-  width: 100%;
-  max-width: 900px;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.faq-card h3 {
-  font-size: 1.4rem;
   color: #333;
-  margin-bottom: 10px;
-  font-weight: 700;
-  border-left: 4px solid #00c473;
-  padding-left: 10px;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
-.faq-card p {
+/* FAQ 메시지 컨테이너 */
+.faq-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 80%;
+  margin-bottom: 20px;
+}
+
+/* 유저 메시지 스타일 */
+.faq-message.user-message {
+  align-items: flex-end;
+}
+
+/* 관리자 메시지 스타일 */
+.faq-message.admin-message {
+  align-items: flex-start;
+}
+
+/* 말풍선 스타일 */
+.message-bubble {
+  background-color: #f1f1f1;
+  border-radius: 18px;
+  padding: 15px 20px;
+  max-width: 75%;
+  position: relative;
   font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-  margin: 0;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 유저 말풍선 */
+.faq-message.user-message .message-bubble {
+  background-color: #00c473;
+  color: white;
+  border-radius: 18px 18px 0 18px;
+  align-self: flex-end;
+}
+
+/* 관리자 말풍선 */
+.faq-message.admin-message .message-bubble {
+  background-color: #e0e0e0;
+  border-radius: 18px 18px 18px 0;
+  align-self: flex-start;
+}
+
+/* 말풍선 꼬리 부분 */
+.message-bubble::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.faq-message.user-message .message-bubble::after {
+  border-top: 10px solid #00c473;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.faq-message.admin-message .message-bubble::after {
+  border-top: 10px solid #e0e0e0;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
