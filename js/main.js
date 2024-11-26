@@ -1,27 +1,34 @@
+/* 
+    날짜 : 2024/11/22
+    이름 : 강유정
+    내용 : 메인 js 생성
+*/
+
 document.addEventListener("DOMContentLoaded", () => {
     const slider = document.querySelector(".main3-slider");
     const cards = document.querySelectorAll(".main3-card");
-    const prevBtn = document.querySelector(".prev-btn");
-    const nextBtn = document.querySelector(".next-btn");
+    const prevButton = document.querySelector(".prev-btn");
+    const nextButton = document.querySelector(".next-btn");
 
     let currentIndex = 0;
 
-    const updateSlide = () => {
-        const cardWidth = cards[0].clientWidth; // 카드 한 개의 너비
-        const offset = -currentIndex * cardWidth; // 이동할 거리 계산
-        slider.style.transform = `translateX(${offset}px)`; // 카드 이동
+    const updateSliderPosition = () => {
+        const offset = -currentIndex * 100;
+        cards.forEach((card) => {
+            card.style.transform = `translateX(${offset}%)`;
+        });
     };
 
-    prevBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : cards.length - 1;
-        updateSlide();
+    prevButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+        updateSliderPosition();
     });
 
-    nextBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex < cards.length - 1) ? currentIndex + 1 : 0;
-        updateSlide();
+    nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % cards.length;
+        updateSliderPosition();
     });
 
-    // 초기 슬라이드 위치 설정
-    updateSlide();
+    updateSliderPosition(); // 초기 슬라이더 위치 설정
 });
+
